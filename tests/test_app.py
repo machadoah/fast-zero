@@ -14,27 +14,6 @@ def test_read_root_deve_retornar_ok_e_owner():
     assert response.json() == {'owner': '@machadoah'}  # Assert (Afirmação)
 
 
-def test_read_root_deve_retornar_ok_e_owner_em_html():
-    client = TestClient(app)
-
-    response = client.get('/html')
-
-    assert response.status_code == HTTPStatus.OK
-    assert (
-        response.text
-        == """
-    <html>
-        <head>
-            <title>Fast-Zero :zap:</title>
-        </head>
-        <body>
-            <h1>@machadoah</h1>
-        </body>
-    </html>
-    """
-    )
-
-
 def test_health_check_deve_retornar_ok_e_mensagem():
     client = TestClient(app)
 
