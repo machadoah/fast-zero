@@ -50,6 +50,7 @@ run_nw = 'fastapi dev fast_zero/app.py --host 0.0.0.0'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_zero -vv'
 post_test = 'coverage html'
+test_full = 'task format && task test'
 
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
