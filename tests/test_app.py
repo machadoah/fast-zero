@@ -20,4 +20,4 @@ def test_health_check_deve_retornar_ok_e_mensagem():
     response = client.get('/health')
 
     assert response.status_code == HTTPStatus.OK
-    assert ('API' in response.json()['message'].upper())
+    assert 'API' in response.json()['message'].upper()
