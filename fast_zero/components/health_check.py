@@ -10,6 +10,6 @@ llm = Groq(
 )
 
 
-def generate_health_check():
+def generate_health_check() -> str:
     response = llm.complete(PROMPT_HEALTH_CHECK)
     return response.text

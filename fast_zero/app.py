@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 @app.get('/')
-async def read_root():
+async def read_root() -> dict:
     """
     Lê o endpoint raiz e retorna o nome do proprietário.
 
@@ -19,7 +19,7 @@ async def read_root():
 
 
 @app.get('/health')
-async def health_check():
+async def health_check() -> dict:
     """
     Verifica o estado da API e retorna uma mensagem
     indicando se está funcionando corretamente.
