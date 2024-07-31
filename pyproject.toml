@@ -45,6 +45,7 @@ addopts = '-p no:warnings'
 
 [tool.taskipy.tasks]
 run = 'fastapi dev fast_zero/app.py'
+run_nw = 'fastapi dev fast_zero/app.py --host 0.0.0.0'
 
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_zero -vv'
