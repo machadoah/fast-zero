@@ -8,7 +8,7 @@ from fast_zero.schemas import Message
 app = FastAPI()
 
 
-@app.get('/', status_code=HTTPStatus.OK, response_model=Message)
+@app.get('/', status_code=HTTPStatus.OK)
 async def read_root() -> dict:
     """
     Lê o endpoint raiz e retorna o nome do proprietário.
