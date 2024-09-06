@@ -7,8 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "3.12.*"
-fastapi = "^0.111.1"
-llama-index-llms-groq = "^0.1.4"
+fastapi = {extras = ["standard"], version = "^0.113.0"}
+pydantic = {extras = ["email"], version = "^2.9.0"}
 
 
 [tool.poetry.group.dev.dependencies]
@@ -19,7 +19,7 @@ taskipy = "^1.13.0"
 ignr = "^2.2"
 
 [tool.ruff]
-line-length = 79
+line-length = 119
 extend-exclude = ['migrations']
 
 [tool.ruff.lint]
